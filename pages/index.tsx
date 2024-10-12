@@ -4,11 +4,11 @@ export default function Home() {
   return (
     <div className="flex">
       <aside
-        className="relative w-1/4 h-screen bg-cover bg-center flex flex-col items-center justify-start pt-8 p-4"
+        className="relative w-1/4 h-screen bg-cover bg-center flex flex-col items-center justify-start pt-16 p-4"
         style={{ backgroundImage: `url('/toronto-flatiron-building.jpg')` }}
       >
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
+        <div className="absolute inset-0 bg-black opacity-75 z-0"></div>
 
         {/* Profile Picture Section */}
         <section className="relative z-10 mb-4">
@@ -24,7 +24,15 @@ export default function Home() {
         {/* About Me Description */}
         <section className="relative z-10 mb-4 text-center">
           <h2 className="text-3xl font-bold text-white">William Lam</h2>
-          <p className="text-sm text-white"></p>
+          <p className="text-sm text-white">
+            Hey! My name is William. I&apos;m currently a student at the
+            University of Toronto studying Computer Science! In my spare time, I
+            like to read, play volleyball and basketball, and play chess.
+            I&apos;m also very passionate about teaching, and hope to one day be
+            a Project Lead for a software project or a volleyball coach. This is
+            my personal blog, where I will share my thoughts and reflections. I
+            hope this website gives some perspective into who I am as a person.
+          </p>
         </section>
 
         {/* Social Media Links */}
