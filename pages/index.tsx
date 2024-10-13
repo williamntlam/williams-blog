@@ -105,22 +105,23 @@ export default function Home({ posts }: HomeProps) {
             respect and kindness, and to constantly push myself to be a better
             person. I understand that some days you want to let go of your
             humanity, to give up because the world has treated you unfairly. Why
-            be kind? Why be a good person when the world hasn’t been good to
-            you? I understand. I understand the feeling of wanting to let go, to
-            be apathetic in a world that feels otherwise nihilistic. I believe
-            that the greatest thing we have as humans is our humanity. Our
-            humanity comes from our ability to be compassionate, to treat others
-            with kindness and respect no matter what background or circumstances
-            we've been through. It is through these values that someone is able
-            to develop their character. For me, I believe that character is the
-            single most important thing someone can work on in their life. My
-            volleyball coach used to say this: "Watch your actions, they become
-            habits; watch your habits, they become your character; watch your
-            character, it becomes your destiny." I truly believe that you cannot
-            give up on your humanity because your humanity is really the core of
-            your character. No matter how hard life gets, I vow to never stop
-            caring for the world and those around me. I vow to give back to the
-            world precisely because the world has given so much to me.
+            be kind? Why be a good person when the world hasn&apos;t been good
+            to you? I understand. I understand the feeling of wanting to let go,
+            to be apathetic in a world that feels otherwise nihilistic. I
+            believe that the greatest thing we have as humans is our humanity.
+            Our humanity comes from our ability to be compassionate, to treat
+            others with kindness and respect no matter what background or
+            circumstances we&apos;ve been through. It is through these values
+            that someone is able to develop their character. For me, I believe
+            that character is the single most important thing someone can work
+            on in their life. My volleyball coach used to say this: &quot;Watch
+            your actions, they become habits; watch your habits, they become
+            your character; watch your character, it becomes your destiny.&quot;
+            I truly believe that you cannot give up on your humanity because
+            your humanity is really the core of your character. No matter how
+            hard life gets, I vow to never stop caring for the world and those
+            around me. I vow to give back to the world precisely because the
+            world has given so much to me.
           </p>
         </section>
         {posts.reverse().map((post) => (
