@@ -39,8 +39,8 @@ export default function Home({ posts }: HomeProps) {
           <Image
             src="/personal-picture.jpg"
             alt="A personal picture of William Lam"
-            width={150}
-            height={150}
+            width={170}
+            height={170}
             className="rounded-full mx-auto aspect-square"
           />
         </section>
