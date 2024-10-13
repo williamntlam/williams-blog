@@ -54,7 +54,7 @@ export default function Home({ posts }: HomeProps) {
             like to read, play volleyball and basketball, and play chess.
             I&apos;m also very passionate about teaching, and hope to one day be
             a Project Lead for a software project or a volleyball coach. This is
-            my personal blog where I will share my thoughts and reflections. I
+            my personal blog, where I will share my thoughts and reflections. I
             hope this website gives some perspective into who I am as a person.
           </p>
         </section>
