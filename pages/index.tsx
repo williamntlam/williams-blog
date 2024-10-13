@@ -1,10 +1,34 @@
 import Image from "next/image";
+import { GetStaticProps } from "next";
+import postsData from "../data/posts.json";
 
-export default function Home() {
+type Post = {
+  id: string;
+  title: string;
+  date: string;
+  content: string;
+};
+
+// Define the props type for the Home component
+type HomeProps = {
+  posts: Post[];
+};
+
+// getStaticProps with proper type annotations
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  return {
+    props: {
+      posts: postsData as Post[], // Type assertion to ensure TypeScript knows postsData matches the Post[] type
+    },
+  };
+};
+
+export default function Home({ posts }: HomeProps) {
   return (
-    <div className="flex">
+    <div className="flex flex-col md:flex-row">
+      {/* Sidebar */}
       <aside
-        className="relative w-1/4 h-screen bg-cover bg-center flex flex-col items-center justify-start pt-16 p-4"
+        className="w-full md:w-64 h-auto md:h-screen bg-cover bg-center flex flex-col items-center justify-start pt-16 p-4 md:fixed top-0 left-0"
         style={{ backgroundImage: `url('/toronto-flatiron-building.jpg')` }}
       >
         {/* Dark Overlay */}
@@ -42,7 +66,7 @@ export default function Home() {
               href="https://github.com/williamntlam"
               target="_blank"
               rel="noopener noreferrer"
-              className="mr-4 hover:underline hover:text-blue-300 transition-colors text-white"
+              className="hover:underline hover:text-blue-600 transition-colors text-white"
             >
               Github
             </a>
@@ -50,7 +74,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/william-lam-b3a8a2213/"
               target="_blank"
               rel="noopener noreferrer"
-              className="mr-4 hover:underline hover:text-blue-300 transition-colors text-white"
+              className="hover:underline hover:text-blue-600 transition-colors text-white"
             >
               Linkedin
             </a>
@@ -58,7 +82,7 @@ export default function Home() {
               href="https://devpost.com/williamntlam?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"
               target="_blank"
               rel="noopener noreferrer"
-              className="mr-4 hover:underline hover:text-blue-300 transition-colors text-white"
+              className="hover:underline hover:text-blue-600 transition-colors text-white"
             >
               Devpost
             </a>
@@ -66,7 +90,49 @@ export default function Home() {
         </nav>
       </aside>
 
-      <main className="w-3/4 p-4 bg-white">Hello World</main>
+      {/* Main Content */}
+      <main className="w-full p-10 bg-white text-black md:ml-64">
+        <section className="mb-8 pb-4 border-b border-gray-300">
+          <h2 className="text-2xl font-bold mb-2">
+            My vow to never give up on myself and the world around me.
+          </h2>
+          <small className="text-sm text-gray-500 block mb-4">
+            August 9th, 2024
+          </small>
+          <p className="leading-relaxed">
+            No matter how hard life gets, I vow to never give up on my humanity.
+            I vow to always be a good person, to treat everyone I see with
+            respect and kindness, and to constantly push myself to be a better
+            person. I understand that some days you want to let go of your
+            humanity, to give up because the world has treated you unfairly. Why
+            be kind? Why be a good person when the world hasn’t been good to
+            you? I understand. I understand the feeling of wanting to let go, to
+            be apathetic in a world that feels otherwise nihilistic. I believe
+            that the greatest thing we have as humans is our humanity. Our
+            humanity comes from our ability to be compassionate, to treat others
+            with kindness and respect no matter what background or circumstances
+            we've been through. It is through these values that someone is able
+            to develop their character. For me, I believe that character is the
+            single most important thing someone can work on in their life. My
+            volleyball coach used to say this: "Watch your actions, they become
+            habits; watch your habits, they become your character; watch your
+            character, it becomes your destiny." I truly believe that you cannot
+            give up on your humanity because your humanity is really the core of
+            your character. No matter how hard life gets, I vow to never stop
+            caring for the world and those around me. I vow to give back to the
+            world precisely because the world has given so much to me.
+          </p>
+        </section>
+        {posts.reverse().map((post) => (
+          <section className="mb-8 pb-4 border-b border-gray-300">
+            <h2 className="text-2xl font-bold mb-2">{post.title}</h2>
+            <small className="text-sm text-gray-500 block mb-4">
+              {post.date}
+            </small>
+            <p className="leading-relaxed">{post.content}</p>
+          </section>
+        ))}
+      </main>
     </div>
   );
 }
