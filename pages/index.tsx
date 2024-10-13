@@ -3,7 +3,7 @@ import { GetStaticProps } from "next";
 import postsData from "../data/posts.json";
 
 type Post = {
-  id: string;
+  id: number;
   title: string;
   date: string;
   content: string;
