@@ -41,7 +41,7 @@ export default function Home({ posts }: HomeProps) {
             alt="A personal picture of William Lam"
             width={150}
             height={150}
-            className="rounded-full mx-auto"
+            className="rounded-full mx-auto aspect-square"
           />
         </section>
 
@@ -124,15 +124,21 @@ export default function Home({ posts }: HomeProps) {
             world has given so much to me.
           </p>
         </section>
-        {posts.reverse().map((post) => (
-          <section className="mb-8 pb-4 border-b border-gray-300">
-            <h2 className="text-2xl font-bold mb-2">{post.title}</h2>
-            <small className="text-sm text-gray-500 block mb-4">
-              {post.date}
-            </small>
-            <p className="leading-relaxed">{post.content}</p>
-          </section>
-        ))}
+        {posts
+          .slice()
+          .reverse()
+          .map((post) => (
+            <section
+              key={post.id}
+              className="mb-8 pb-4 border-b border-gray-300"
+            >
+              <h2 className="text-2xl font-bold mb-2">{post.title}</h2>
+              <small className="text-sm text-gray-500 block mb-4">
+                {post.date}
+              </small>
+              <p className="leading-relaxed">{post.content}</p>
+            </section>
+          ))}
       </main>
     </div>
   );
