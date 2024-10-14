@@ -29,11 +29,10 @@ export default function Home({ posts }: HomeProps) {
       {/* Sidebar */}
       <aside
         className="w-full md:w-80 h-auto md:h-screen bg-cover bg-center flex flex-col items-center justify-start pt-16 p-4 md:fixed top-0 left-0"
-        style={{ backgroundImage: `url('/toronto-flatiron-building.jpg')` }}
+        style={{
+          backgroundImage: `url('/toronto-flatiron-building-dark.jpg')`,
+        }}
       >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black opacity-75 z-0"></div>
-
         {/* Profile Picture Section */}
         <section className="relative z-10 mb-4">
           <Image
