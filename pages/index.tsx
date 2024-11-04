@@ -93,7 +93,7 @@ export default function Home({ posts }: HomeProps) {
       <main className="w-full p-10 bg-white text-black md:ml-80">
         <section className="mb-8 pb-4 border-b border-gray-300">
           <h2 className="text-2xl font-bold mb-2">
-            My vow to never give up on myself and the world around me.
+            My vow to never give up on myself and the world around me
           </h2>
           <small className="text-sm text-gray-500 block mb-4">
             August 9th, 2024
