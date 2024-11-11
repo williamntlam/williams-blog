@@ -28,7 +28,7 @@ export default function Home({ posts }: HomeProps) {
     <div className="flex flex-col md:flex-row">
       {/* Sidebar */}
       <aside
-        className="w-full md:w-80 h-auto md:h-screen bg-cover bg-center flex flex-col items-center justify-start pt-16 p-4 md:fixed top-0 left-0"
+        className="w-full md:w-80 h-auto md:h-screen bg-cover bg-center flex flex-col items-center justify-start pt-40 p-4 md:fixed top-0 left-0"
         style={{
           backgroundImage: `url('/toronto-flatiron-building-dark.jpg')`,
         }}
